@@ -98,26 +98,9 @@ echo "<table border='0'>";
 	echo "<td width=15%>" . $disp_oice."</td>";
 	echo "</tr>";
 echo "</table>";
-//echo "<br>Observation Summary:";
-//echo "Total Count: $totCount";
-/* if (mysqli_num_rows($result) > 0) {
-	$i = 1;
-	$total = mysqli_num_rows($result);
-	echo "<table border='0' id='table8'>";
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-		echo "<tr>";
-		echo '<td id="subSpecies'.$rowNo1._.$i.'"><a name="name'.$rowNo1._.$i.' href="#name'.$rowNo1._.$i.'" onclick="loadproduct2(\''.mysqli_escape_string($conn, $row["subSpName"]).'\', \''.$rowNo1._.$i.'\', \''.$total.'\')"><button class="collapsibleSub">  &nbsp;&nbsp;&nbsp;&nbsp;  ' .ucfirst($row["subSpName"]). '</button></a></td>';
-		echo "</tr>";
-		echo "<tr><td id='bird_details".$rowNo1._.$i."'></td></tr>";
-		$i = $i+1;
-    }
-} else {
-    echo "No data to show";
-}
 
 mysqli_close($conn);
-echo "</table>";        */
+
 ?>      
 
 <script>

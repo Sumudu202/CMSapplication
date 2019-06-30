@@ -108,6 +108,7 @@ if (isset($_REQUEST['submit'])){
 		}
 	}
 }
+mysqli_close($conn);
 ?>
 </body>
 </html>
