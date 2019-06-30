@@ -7,14 +7,6 @@ table {
 margin: 5px 50px 5px 10px;
 }
 
-#table1{
-	margin: 5px 50px 5px 10px;
-}
-
-#table2{
-	margin: 5px 50px 5px 10px;
-}
-
 th {
 font-family: Arial, Helvetica, sans-serif;
 font-size: .7em;
@@ -96,42 +88,6 @@ text-decoration: none;
   background-color: #f1f1f1;
 }
 
-/* SubSpecies Style the button that is used to open and close the collapsible content */
-.collapsibleSub {
-  background-color: #a1a1a1;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 920px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active2, .collapsibleSub:hover {
-  background-color: #ea9c4c;
-}
-
-.collapsibleSub:after {
-  //content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active2:after {
-  //content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
 
 </style>
 </head>
@@ -149,10 +105,10 @@ $conn = conDb();
 		<td>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		</td>
-		<td align="right">
+		<td align="left">
 			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="GET" >
 				<input type="text" name="search" placeholder="Search for species..." />
-				<input type="submit" name="submit" value="Search" id="post_search" />
+				<input type="submit" name="submit" value="Search" id="post_search" onclick="myFunction()" />
 			</form>
 		</td>
 	</tr>
@@ -204,7 +160,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	$i=1;
 	echo "<table border='0' id='table1' width='100%'>";
-	echo "<tr><td>All species</td></tr>";
+	echo "<tr><td>&nbsp;&nbsp;All species</td></tr>";
     while($row = mysqli_fetch_assoc($result)) {
 		// Row for species
 		echo "<tr>";
